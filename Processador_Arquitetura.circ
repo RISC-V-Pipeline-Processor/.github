@@ -161,6 +161,10 @@
       <a name="label" val="B"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(1890,870)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="CLK"/>
+    </comp>
     <comp lib="0" loc="(1890,950)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="A"/>
@@ -168,10 +172,6 @@
     </comp>
     <comp lib="0" loc="(190,840)" name="Tunnel">
       <a name="label" val="W"/>
-    </comp>
-    <comp lib="0" loc="(1930,890)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="CLK"/>
     </comp>
     <comp lib="0" loc="(1940,580)" name="Splitter">
       <a name="fanout" val="8"/>
@@ -196,12 +196,12 @@
     <comp lib="0" loc="(2000,420)" name="Tunnel">
       <a name="label" val="MemtoReg"/>
     </comp>
+    <comp lib="0" loc="(2000,890)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="REGWRITE_MEM"/>
+    </comp>
     <comp lib="0" loc="(2010,460)" name="Splitter">
       <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(2010,890)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
     </comp>
     <comp lib="0" loc="(2050,460)" name="Tunnel">
       <a name="label" val="ALUOp"/>
@@ -278,6 +278,9 @@
       <a name="label" val="ALUOP_ID"/>
       <a name="width" val="2"/>
     </comp>
+    <comp lib="0" loc="(2420,1070)" name="Tunnel">
+      <a name="label" val="REGWRITE_ID"/>
+    </comp>
     <comp lib="0" loc="(2420,850)" name="Tunnel">
       <a name="label" val="MEMREAD_ID"/>
     </comp>
@@ -345,34 +348,41 @@
       <a name="label" val="BRANCH_ID"/>
     </comp>
     <comp lib="0" loc="(320,1170)" name="Clock"/>
-    <comp lib="0" loc="(3250,710)" name="Tunnel">
+    <comp lib="0" loc="(3250,680)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MEMREAD_ID"/>
     </comp>
-    <comp lib="0" loc="(3250,750)" name="Tunnel">
+    <comp lib="0" loc="(3250,720)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MEMTOREG_ID"/>
     </comp>
-    <comp lib="0" loc="(3250,790)" name="Tunnel">
+    <comp lib="0" loc="(3250,760)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MEMWRITE_ID"/>
     </comp>
-    <comp lib="0" loc="(3250,830)" name="Tunnel">
+    <comp lib="0" loc="(3250,800)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGWRITE_ID"/>
+    </comp>
+    <comp lib="0" loc="(3250,840)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(3250,870)" name="Tunnel">
+    <comp lib="0" loc="(3250,880)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="R"/>
     </comp>
-    <comp lib="0" loc="(3290,710)" name="Tunnel">
+    <comp lib="0" loc="(3290,680)" name="Tunnel">
       <a name="label" val="MREAD_EX"/>
     </comp>
-    <comp lib="0" loc="(3290,750)" name="Tunnel">
+    <comp lib="0" loc="(3290,720)" name="Tunnel">
       <a name="label" val="MTOREG_EX"/>
     </comp>
-    <comp lib="0" loc="(3290,790)" name="Tunnel">
+    <comp lib="0" loc="(3290,760)" name="Tunnel">
       <a name="label" val="MWRITE_EX"/>
+    </comp>
+    <comp lib="0" loc="(3290,800)" name="Tunnel">
+      <a name="label" val="REGWRITE_EX"/>
     </comp>
     <comp lib="0" loc="(3420,1090)" name="Tunnel">
       <a name="label" val="RD_EX"/>
@@ -419,20 +429,27 @@
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(4160,1000)" name="Tunnel">
+    <comp lib="0" loc="(4190,1010)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(4160,1040)" name="Tunnel">
+    <comp lib="0" loc="(4190,1040)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="R"/>
     </comp>
-    <comp lib="0" loc="(4160,960)" name="Tunnel">
+    <comp lib="0" loc="(4190,930)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MTOREG_EX"/>
     </comp>
-    <comp lib="0" loc="(4200,960)" name="Tunnel">
+    <comp lib="0" loc="(4190,970)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGWRITE_EX"/>
+    </comp>
+    <comp lib="0" loc="(4230,930)" name="Tunnel">
       <a name="label" val="MEMTOREG_MEM"/>
+    </comp>
+    <comp lib="0" loc="(4230,970)" name="Tunnel">
+      <a name="label" val="REGWRITE_MEM"/>
     </comp>
     <comp lib="0" loc="(4320,1110)" name="Tunnel">
       <a name="label" val="RD_MEM"/>
@@ -505,9 +522,9 @@ a00093 1400113 1e00193 2800213 3200293 a02083
     <comp loc="(2930,490)" name="Somador"/>
     <comp loc="(2940,910)" name="ULA"/>
     <comp loc="(3030,1550)" name="AluControl"/>
-    <comp loc="(3290,710)" name="UC_EX_MEM"/>
+    <comp loc="(3290,680)" name="UC_EX_MEM"/>
     <comp loc="(3380,910)" name="EX_MEM"/>
-    <comp loc="(4200,960)" name="UC_MEM_WB"/>
+    <comp loc="(4230,930)" name="UC_MEM_WB"/>
     <comp loc="(4290,1070)" name="MEM_WB"/>
     <comp loc="(450,1000)" name="Registrador_32bits">
       <a name="label" val="PC"/>
@@ -582,6 +599,8 @@ a00093 1400113 1e00193 2800213 3200293 a02083
     <wire from="(170,880)" to="(220,880)"/>
     <wire from="(1870,1050)" to="(1890,1050)"/>
     <wire from="(1880,1400)" to="(2100,1400)"/>
+    <wire from="(1890,870)" to="(1890,890)"/>
+    <wire from="(1890,890)" to="(1930,890)"/>
     <wire from="(1910,410)" to="(1940,410)"/>
     <wire from="(1940,410)" to="(1940,580)"/>
     <wire from="(1940,580)" to="(1950,580)"/>
@@ -7533,7 +7552,7 @@ a00093 1400113 1e00193 2800213 3200293 a02083
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#a8a8a8" height="202" stroke="#f00000" width="42" x="149" y="144"/>
+      <rect fill="#a8a8a8" height="232" stroke="#f00000" width="42" x="149" y="144"/>
       <polyline fill="none" points="150,182 191,182" stroke="#f00000"/>
       <polyline fill="none" points="150,223 191,223" stroke="#f00000"/>
       <polyline fill="none" points="150,262 191,262" stroke="#f00000"/>
@@ -7541,16 +7560,18 @@ a00093 1400113 1e00193 2800213 3200293 a02083
       <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="163">WB</text>
       <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="170" y="202">MTR</text>
       <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="169" y="243">MW</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="172" y="283">CLK</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="171" y="324">R</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="171" y="321">CLK</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="172" y="359">R</text>
+      <polyline fill="none" points="150,339 191,339" stroke="#f00000"/>
+      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="281">RW</text>
       <circ-anchor facing="east" x="190" y="160"/>
-      <circ-port dir="in" pin="1040,910" x="150" y="250"/>
-      <circ-port dir="in" pin="1240,910" x="150" y="260"/>
-      <circ-port dir="in" pin="310,680" x="150" y="320"/>
-      <circ-port dir="in" pin="310,740" x="150" y="280"/>
+      <circ-port dir="in" pin="1040,910" x="150" y="280"/>
+      <circ-port dir="in" pin="310,680" x="150" y="360"/>
+      <circ-port dir="in" pin="310,740" x="150" y="320"/>
       <circ-port dir="in" pin="610,770" x="150" y="240"/>
       <circ-port dir="in" pin="690,650" x="150" y="200"/>
       <circ-port dir="in" pin="700,520" x="150" y="160"/>
+      <circ-port dir="out" pin="1240,910" x="190" y="280"/>
       <circ-port dir="out" pin="1310,770" x="190" y="240"/>
       <circ-port dir="out" pin="1320,520" x="190" y="160"/>
       <circ-port dir="out" pin="1320,650" x="190" y="200"/>
@@ -7563,6 +7584,7 @@ a00093 1400113 1e00193 2800213 3200293 a02083
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S_REGWRITE_EX"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(1310,770)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -7658,18 +7680,20 @@ a00093 1400113 1e00193 2800213 3200293 a02083
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#a8a8a8" height="116" stroke="#f00000" width="44" x="148" y="141"/>
-      <polyline fill="none" points="149,218 190,218" stroke="#f00000"/>
-      <polyline fill="none" points="148,179 192,179" stroke="#f00000"/>
+      <rect fill="#a8a8a8" height="150" stroke="#f00000" width="41" x="150" y="140"/>
+      <polyline fill="none" points="151,218 191,218" stroke="#f00000"/>
+      <polyline fill="none" points="151,178 190,178" stroke="#f00000"/>
       <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="163">WB</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="173" y="201">CLK</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="171" y="241">R</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="172" y="237">CLK</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="171" y="273">R</text>
+      <polyline fill="none" points="151,256 190,256" stroke="#f00000"/>
+      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="199">RW</text>
       <circ-anchor facing="east" x="190" y="160"/>
-      <circ-port dir="in" pin="650,760" x="150" y="240"/>
-      <circ-port dir="in" pin="670,860" x="150" y="170"/>
+      <circ-port dir="in" pin="650,760" x="150" y="270"/>
+      <circ-port dir="in" pin="670,860" x="150" y="200"/>
       <circ-port dir="in" pin="700,580" x="150" y="160"/>
-      <circ-port dir="in" pin="720,690" x="150" y="200"/>
-      <circ-port dir="out" pin="890,860" x="190" y="170"/>
+      <circ-port dir="in" pin="720,690" x="150" y="240"/>
+      <circ-port dir="out" pin="890,860" x="190" y="200"/>
       <circ-port dir="out" pin="910,580" x="190" y="160"/>
     </appear>
     <comp lib="0" loc="(650,760)" name="Pin">
