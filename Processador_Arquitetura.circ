@@ -303,6 +303,10 @@
     <comp lib="0" loc="(2420,960)" name="Tunnel">
       <a name="label" val="ALUSRC_ID"/>
     </comp>
+    <comp lib="0" loc="(2480,480)" name="Constant">
+      <a name="value" val="0x2"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(2610,1260)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="ALUSRC_ID"/>
@@ -398,15 +402,15 @@
       <a name="label" val="RD_MEM"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(3180,570)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="BRANCH_ID"/>
-    </comp>
     <comp lib="0" loc="(320,1170)" name="Clock"/>
     <comp lib="0" loc="(3230,1510)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="RD_EX"/>
       <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(3230,650)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="BRANCH_ID"/>
     </comp>
     <comp lib="0" loc="(3240,1570)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -560,7 +564,7 @@
     <comp lib="0" loc="(820,270)" name="Constant">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(3310,590)" name="AND Gate"/>
+    <comp lib="1" loc="(3550,550)" name="AND Gate"/>
     <comp lib="2" loc="(2630,1230)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
@@ -572,10 +576,14 @@
       <a name="select" val="2"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="2" loc="(3520,490)" name="Multiplexer">
+    <comp lib="2" loc="(3660,490)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
     <comp lib="2" loc="(4570,1130)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(2630,470)" name="Shifter">
+      <a name="shift" val="lr"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="4" loc="(1670,350)" name="ROM">
@@ -596,7 +604,7 @@
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 24 32
-a00093 1400113 1e00193 2800213 3200293 209093 202023
+2000063
 </a>
       <a name="dataWidth" val="32"/>
       <a name="misaligned" val="true"/>
@@ -626,8 +634,6 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(1080,250)" to="(1080,300)"/>
     <wire from="(1080,300)" to="(3190,300)"/>
     <wire from="(1100,920)" to="(1170,920)"/>
-    <wire from="(1110,320)" to="(1110,510)"/>
-    <wire from="(1110,320)" to="(2710,320)"/>
     <wire from="(1170,980)" to="(1180,980)"/>
     <wire from="(120,1110)" to="(140,1110)"/>
     <wire from="(1390,1230)" to="(1450,1230)"/>
@@ -739,10 +745,11 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(230,1010)" to="(230,1020)"/>
     <wire from="(230,1040)" to="(230,1050)"/>
     <wire from="(230,980)" to="(230,1000)"/>
+    <wire from="(2480,480)" to="(2590,480)"/>
     <wire from="(2510,1180)" to="(2540,1180)"/>
     <wire from="(2510,1200)" to="(2630,1200)"/>
     <wire from="(2510,1220)" to="(2560,1220)"/>
-    <wire from="(2510,1240)" to="(2600,1240)"/>
+    <wire from="(2510,1240)" to="(2570,1240)"/>
     <wire from="(2510,1260)" to="(2550,1260)"/>
     <wire from="(2510,1280)" to="(2540,1280)"/>
     <wire from="(2510,1300)" to="(2520,1300)"/>
@@ -750,10 +757,10 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(2510,1430)" to="(2680,1430)"/>
     <wire from="(2520,1300)" to="(2520,1400)"/>
     <wire from="(2520,1400)" to="(2710,1400)"/>
-    <wire from="(2540,1070)" to="(2540,1180)"/>
-    <wire from="(2540,1070)" to="(2600,1070)"/>
     <wire from="(2540,1280)" to="(2540,1370)"/>
     <wire from="(2540,1370)" to="(2690,1370)"/>
+    <wire from="(2540,510)" to="(2540,1180)"/>
+    <wire from="(2540,510)" to="(2710,510)"/>
     <wire from="(2550,1260)" to="(2550,1340)"/>
     <wire from="(2550,1340)" to="(2680,1340)"/>
     <wire from="(2560,1080)" to="(2560,1220)"/>
@@ -761,11 +768,13 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(2560,1220)" to="(2560,1300)"/>
     <wire from="(2560,1220)" to="(2600,1220)"/>
     <wire from="(2560,1300)" to="(2700,1300)"/>
-    <wire from="(2600,520)" to="(2600,1070)"/>
-    <wire from="(2600,520)" to="(2710,520)"/>
+    <wire from="(2570,1240)" to="(2600,1240)"/>
+    <wire from="(2570,460)" to="(2570,1240)"/>
+    <wire from="(2570,460)" to="(2590,460)"/>
     <wire from="(2610,1250)" to="(2610,1260)"/>
     <wire from="(2630,1200)" to="(2730,1200)"/>
     <wire from="(2630,1230)" to="(2660,1230)"/>
+    <wire from="(2630,470)" to="(2670,470)"/>
     <wire from="(2630,770)" to="(2630,1200)"/>
     <wire from="(2630,770)" to="(2710,770)"/>
     <wire from="(2640,1700)" to="(4590,1700)"/>
@@ -780,10 +789,10 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(2650,980)" to="(2700,980)"/>
     <wire from="(2660,960)" to="(2660,1230)"/>
     <wire from="(2660,960)" to="(2700,960)"/>
+    <wire from="(2670,470)" to="(2670,490)"/>
+    <wire from="(2670,490)" to="(2710,490)"/>
     <wire from="(2680,1330)" to="(2680,1340)"/>
     <wire from="(2680,1330)" to="(2690,1330)"/>
-    <wire from="(2710,320)" to="(2710,490)"/>
-    <wire from="(2710,510)" to="(2710,520)"/>
     <wire from="(2720,1000)" to="(2720,1010)"/>
     <wire from="(2720,1010)" to="(2750,1010)"/>
     <wire from="(2730,810)" to="(2730,830)"/>
@@ -820,8 +829,6 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(3000,1050)" to="(3160,1050)"/>
     <wire from="(3020,490)" to="(3020,910)"/>
     <wire from="(3020,910)" to="(3160,910)"/>
-    <wire from="(3050,610)" to="(3050,880)"/>
-    <wire from="(3050,610)" to="(3260,610)"/>
     <wire from="(3050,880)" to="(3050,990)"/>
     <wire from="(3050,990)" to="(3160,990)"/>
     <wire from="(3080,950)" to="(3160,950)"/>
@@ -836,7 +843,6 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(3160,970)" to="(3170,970)"/>
     <wire from="(3170,1550)" to="(3170,1560)"/>
     <wire from="(3170,1550)" to="(3300,1550)"/>
-    <wire from="(3180,570)" to="(3260,570)"/>
     <wire from="(3190,300)" to="(3190,310)"/>
     <wire from="(3190,310)" to="(3200,310)"/>
     <wire from="(320,1170)" to="(350,1170)"/>
@@ -845,18 +851,22 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(3210,300)" to="(3210,470)"/>
     <wire from="(3210,470)" to="(3480,470)"/>
     <wire from="(3230,1510)" to="(3300,1510)"/>
+    <wire from="(3230,650)" to="(3250,650)"/>
     <wire from="(3240,1570)" to="(3300,1570)"/>
     <wire from="(3290,1470)" to="(3300,1470)"/>
+    <wire from="(3290,650)" to="(3310,650)"/>
     <wire from="(3300,1470)" to="(3310,1470)"/>
-    <wire from="(3310,590)" to="(3390,590)"/>
+    <wire from="(3310,570)" to="(3310,650)"/>
+    <wire from="(3310,570)" to="(3370,570)"/>
+    <wire from="(3370,530)" to="(3370,570)"/>
+    <wire from="(3370,530)" to="(3500,530)"/>
     <wire from="(3380,1010)" to="(3380,1120)"/>
     <wire from="(3380,1120)" to="(3410,1120)"/>
     <wire from="(3380,910)" to="(3440,910)"/>
+    <wire from="(3380,930)" to="(3480,930)"/>
     <wire from="(3380,950)" to="(3390,950)"/>
     <wire from="(3380,970)" to="(3410,970)"/>
     <wire from="(3380,990)" to="(3400,990)"/>
-    <wire from="(3390,520)" to="(3390,590)"/>
-    <wire from="(3390,520)" to="(3500,520)"/>
     <wire from="(3390,950)" to="(3390,1180)"/>
     <wire from="(3390,950)" to="(3420,950)"/>
     <wire from="(3400,1090)" to="(3420,1090)"/>
@@ -867,11 +877,12 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(3420,1370)" to="(3660,1370)"/>
     <wire from="(3420,950)" to="(3420,1040)"/>
     <wire from="(3440,500)" to="(3440,910)"/>
-    <wire from="(3440,500)" to="(3490,500)"/>
+    <wire from="(3440,500)" to="(3630,500)"/>
     <wire from="(3480,470)" to="(3480,480)"/>
-    <wire from="(3480,480)" to="(3490,480)"/>
+    <wire from="(3480,480)" to="(3630,480)"/>
+    <wire from="(3480,570)" to="(3480,930)"/>
+    <wire from="(3480,570)" to="(3500,570)"/>
     <wire from="(3500,1320)" to="(3640,1320)"/>
-    <wire from="(3500,510)" to="(3500,520)"/>
     <wire from="(3510,1040)" to="(3560,1040)"/>
     <wire from="(3510,620)" to="(3510,1040)"/>
     <wire from="(3510,620)" to="(3980,620)"/>
@@ -879,8 +890,9 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(3520,1460)" to="(3530,1460)"/>
     <wire from="(3520,1490)" to="(3520,1500)"/>
     <wire from="(3520,1500)" to="(3530,1500)"/>
-    <wire from="(3520,490)" to="(3530,490)"/>
-    <wire from="(3530,230)" to="(3530,490)"/>
+    <wire from="(3530,230)" to="(3530,460)"/>
+    <wire from="(3530,460)" to="(3670,460)"/>
+    <wire from="(3550,550)" to="(3640,550)"/>
     <wire from="(3580,1270)" to="(3590,1270)"/>
     <wire from="(3580,720)" to="(3610,720)"/>
     <wire from="(3580,730)" to="(3610,730)"/>
@@ -914,10 +926,13 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(3610,1010)" to="(3670,1010)"/>
     <wire from="(3630,710)" to="(3630,930)"/>
     <wire from="(3630,930)" to="(3670,930)"/>
+    <wire from="(3640,510)" to="(3640,550)"/>
     <wire from="(3640,980)" to="(3640,1320)"/>
     <wire from="(3640,980)" to="(3670,980)"/>
+    <wire from="(3660,490)" to="(3670,490)"/>
     <wire from="(3660,990)" to="(3660,1370)"/>
     <wire from="(3660,990)" to="(3670,990)"/>
+    <wire from="(3670,460)" to="(3670,490)"/>
     <wire from="(3670,980)" to="(3680,980)"/>
     <wire from="(3670,990)" to="(3690,990)"/>
     <wire from="(3910,1010)" to="(3930,1010)"/>
@@ -988,7 +1003,6 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(70,990)" to="(220,990)"/>
     <wire from="(750,250)" to="(750,510)"/>
     <wire from="(750,250)" to="(840,250)"/>
-    <wire from="(750,510)" to="(1110,510)"/>
     <wire from="(820,270)" to="(840,270)"/>
     <wire from="(870,870)" to="(930,870)"/>
     <wire from="(930,1000)" to="(1170,1000)"/>
@@ -7998,18 +8012,20 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#a8a8a8" height="232" stroke="#f00000" width="42" x="149" y="144"/>
+      <rect fill="#a8a8a8" height="268" stroke="#f00000" width="43" x="149" y="108"/>
       <polyline fill="none" points="150,182 191,182" stroke="#f00000"/>
       <polyline fill="none" points="150,223 191,223" stroke="#f00000"/>
       <polyline fill="none" points="150,262 191,262" stroke="#f00000"/>
       <polyline fill="none" points="150,303 191,303" stroke="#f00000"/>
-      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="163">WB</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="170" y="202">MTR</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="162">WB</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="20" font-weight="bold" text-anchor="middle" x="170" y="202">MTR</text>
       <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="169" y="243">MW</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="20" text-anchor="middle" x="171" y="321">CLK</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="20" font-weight="bold" text-anchor="middle" x="171" y="321">CLK</text>
       <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="172" y="359">R</text>
       <polyline fill="none" points="150,339 191,339" stroke="#f00000"/>
       <text dominant-baseline="central" font-family="Dialog" font-size="22" text-anchor="middle" x="170" y="281">RW</text>
+      <polyline fill="none" points="150,146 191,146" stroke="#f00000"/>
+      <text dominant-baseline="central" font-family="Dialog" font-size="22" font-weight="bold" text-anchor="middle" x="171" y="127">B</text>
       <circ-anchor facing="east" x="190" y="160"/>
       <circ-port dir="in" pin="1040,910" x="150" y="280"/>
       <circ-port dir="in" pin="310,680" x="150" y="360"/>
@@ -8017,6 +8033,8 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
       <circ-port dir="in" pin="610,770" x="150" y="240"/>
       <circ-port dir="in" pin="690,650" x="150" y="200"/>
       <circ-port dir="in" pin="700,520" x="150" y="160"/>
+      <circ-port dir="in" pin="810,350" x="150" y="130"/>
+      <circ-port dir="out" pin="1190,350" x="190" y="130"/>
       <circ-port dir="out" pin="1240,910" x="190" y="280"/>
       <circ-port dir="out" pin="1310,770" x="190" y="240"/>
       <circ-port dir="out" pin="1320,520" x="190" y="160"/>
@@ -8025,6 +8043,12 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <comp lib="0" loc="(1040,910)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="REGWRITE_ID"/>
+    </comp>
+    <comp lib="0" loc="(1190,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="BRANCH_EX"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(1240,910)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -8070,6 +8094,13 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
       <a name="appearance" val="NewPins"/>
       <a name="label" val="MEMREAD_EX"/>
     </comp>
+    <comp lib="0" loc="(810,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="BRANCH"/>
+    </comp>
+    <comp lib="4" loc="(1030,340)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp lib="4" loc="(1090,510)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
@@ -8083,18 +8114,22 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(1000,600)" to="(1000,680)"/>
-    <wire from="(1000,600)" to="(1110,600)"/>
+    <wire from="(1000,600)" to="(1050,600)"/>
     <wire from="(1000,680)" to="(1000,740)"/>
     <wire from="(1000,740)" to="(1000,860)"/>
     <wire from="(1000,740)" to="(1120,740)"/>
     <wire from="(1000,860)" to="(1050,860)"/>
+    <wire from="(1020,350)" to="(1030,350)"/>
     <wire from="(1040,910)" to="(1090,910)"/>
+    <wire from="(1050,400)" to="(1050,600)"/>
+    <wire from="(1050,600)" to="(1110,600)"/>
     <wire from="(1050,860)" to="(1050,980)"/>
     <wire from="(1050,860)" to="(1120,860)"/>
     <wire from="(1050,980)" to="(1120,980)"/>
     <wire from="(1060,810)" to="(1060,950)"/>
     <wire from="(1060,810)" to="(1090,810)"/>
     <wire from="(1060,950)" to="(1090,950)"/>
+    <wire from="(1080,350)" to="(1190,350)"/>
     <wire from="(1080,560)" to="(1090,560)"/>
     <wire from="(1090,690)" to="(1100,690)"/>
     <wire from="(1090,810)" to="(1100,810)"/>
@@ -8113,6 +8148,9 @@ a00093 1400113 1e00193 2800213 3200293 209093 202023
     <wire from="(610,770)" to="(1090,770)"/>
     <wire from="(690,650)" to="(1090,650)"/>
     <wire from="(700,520)" to="(1080,520)"/>
+    <wire from="(810,350)" to="(1020,350)"/>
+    <wire from="(950,390)" to="(1020,390)"/>
+    <wire from="(950,390)" to="(950,560)"/>
     <wire from="(950,560)" to="(1080,560)"/>
     <wire from="(950,560)" to="(950,690)"/>
     <wire from="(950,690)" to="(1090,690)"/>
