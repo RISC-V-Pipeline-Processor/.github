@@ -7041,7 +7041,6 @@ a00093 102023
       <circ-port dir="in" pin="800,1140" x="70" y="230"/>
       <circ-port dir="in" pin="800,1360" x="70" y="260"/>
       <circ-port dir="in" pin="800,1480" x="70" y="290"/>
-      <circ-port dir="in" pin="800,930" x="70" y="170"/>
       <circ-port dir="out" pin="1650,1290" x="270" y="230"/>
     </appear>
     <comp lib="0" loc="(1650,1290)" name="Pin">
@@ -7068,10 +7067,6 @@ a00093 102023
       <a name="label" val="R2_EX"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(800,930)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="MEMTOREG_MEM"/>
-    </comp>
     <comp lib="0" loc="(850,1410)" name="Splitter">
       <a name="fanout" val="5"/>
       <a name="incoming" val="5"/>
@@ -7094,7 +7089,7 @@ a00093 102023
       <a name="label" val="Igual"/>
     </comp>
     <comp lib="1" loc="(1570,1290)" name="AND Gate">
-      <a name="inputs" val="5"/>
+      <a name="inputs" val="4"/>
     </comp>
     <comp lib="1" loc="(990,1270)" name="OR Gate">
       <a name="inputs" val="5"/>
@@ -7120,18 +7115,15 @@ a00093 102023
     <wire from="(1440,1300)" to="(1520,1300)"/>
     <wire from="(1440,1310)" to="(1440,1490)"/>
     <wire from="(1440,1310)" to="(1520,1310)"/>
-    <wire from="(1450,1140)" to="(1450,1290)"/>
-    <wire from="(1450,1290)" to="(1520,1290)"/>
-    <wire from="(1460,1030)" to="(1460,1280)"/>
-    <wire from="(1460,1280)" to="(1520,1280)"/>
-    <wire from="(1470,1270)" to="(1520,1270)"/>
-    <wire from="(1470,930)" to="(1470,1270)"/>
+    <wire from="(1450,1140)" to="(1450,1280)"/>
+    <wire from="(1450,1280)" to="(1520,1280)"/>
+    <wire from="(1460,1030)" to="(1460,1270)"/>
+    <wire from="(1460,1270)" to="(1520,1270)"/>
     <wire from="(1570,1290)" to="(1650,1290)"/>
     <wire from="(800,1030)" to="(1460,1030)"/>
     <wire from="(800,1140)" to="(1450,1140)"/>
     <wire from="(800,1360)" to="(830,1360)"/>
     <wire from="(800,1480)" to="(830,1480)"/>
-    <wire from="(800,930)" to="(1470,930)"/>
     <wire from="(830,1300)" to="(830,1360)"/>
     <wire from="(830,1300)" to="(890,1300)"/>
     <wire from="(830,1360)" to="(830,1410)"/>
