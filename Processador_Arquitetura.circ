@@ -161,19 +161,19 @@
       <a name="label" val="Funct7"/>
       <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(2660,2020)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RD_MEM"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(2680,1920)" name="Tunnel">
+    <comp lib="0" loc="(2650,1920)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="A"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(2680,1970)" name="Tunnel">
+    <comp lib="0" loc="(2650,1970)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="B"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(2660,2020)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RD_MEM"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(2720,1830)" name="Tunnel">
@@ -622,7 +622,7 @@
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 24 32
-2000063
+70b3 60b3 b3 400000b3 201093
 </a>
       <a name="dataWidth" val="32"/>
       <a name="misaligned" val="true"/>
@@ -772,6 +772,8 @@
     <wire from="(2480,2060)" to="(2480,2700)"/>
     <wire from="(2480,2060)" to="(2680,2060)"/>
     <wire from="(2480,2700)" to="(5400,2700)"/>
+    <wire from="(2650,1920)" to="(2680,1920)"/>
+    <wire from="(2650,1970)" to="(2680,1970)"/>
     <wire from="(2660,2020)" to="(2680,2020)"/>
     <wire from="(2670,2370)" to="(2890,2370)"/>
     <wire from="(2700,1380)" to="(2730,1380)"/>
@@ -987,9 +989,12 @@
     <wire from="(4610,1850)" to="(4610,1970)"/>
     <wire from="(4610,1850)" to="(4620,1850)"/>
     <wire from="(4620,1720)" to="(4620,1770)"/>
-    <wire from="(4860,1590)" to="(4860,1850)"/>
-    <wire from="(4860,1850)" to="(4860,2120)"/>
-    <wire from="(4860,2120)" to="(4970,2120)"/>
+    <wire from="(4860,1590)" to="(4860,1840)"/>
+    <wire from="(4860,1840)" to="(4880,1840)"/>
+    <wire from="(4860,1850)" to="(4860,2100)"/>
+    <wire from="(4860,2100)" to="(4970,2100)"/>
+    <wire from="(4880,1840)" to="(4880,2120)"/>
+    <wire from="(4880,2120)" to="(4970,2120)"/>
     <wire from="(4920,2060)" to="(4970,2060)"/>
     <wire from="(4930,2600)" to="(5030,2600)"/>
     <wire from="(4950,2140)" to="(4970,2140)"/>
@@ -2106,6 +2111,7 @@
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="output" val="true"/>
+      <a name="radix" val="10signed"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(2120,930)" name="Pin">
@@ -7030,6 +7036,13 @@
     <a name="circuit" val="ID_EX"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1000,1170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S_RD_ID"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(1060,2020)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -7157,13 +7170,6 @@
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
-    </comp>
-    <comp lib="0" loc="(910,1140)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="S_RD_ID"/>
-      <a name="output" val="true"/>
-      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(910,2020)" name="Splitter">
       <a name="facing" val="west"/>
