@@ -290,6 +290,7 @@
       <a name="incoming" val="8"/>
       <a name="spacing" val="3"/>
     </comp>
+    <comp lib="0" loc="(3090,2200)" name="Constant"/>
     <comp lib="0" loc="(3130,1960)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="spacing" val="3"/>
@@ -306,10 +307,6 @@
       <a name="facing" val="east"/>
       <a name="label" val="S_PC_IF"/>
       <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(3170,2200)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="W"/>
     </comp>
     <comp lib="0" loc="(3170,2310)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -366,25 +363,9 @@
     <comp lib="0" loc="(3210,2040)" name="Tunnel">
       <a name="label" val="REGWRITE_ID"/>
     </comp>
-    <comp lib="0" loc="(3210,2410)" name="Tunnel">
-      <a name="label" val="RS1_ID"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(3210,2410)" name="Tunnel">
-      <a name="label" val="RS1_ID"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(3210,2440)" name="Tunnel">
-      <a name="label" val="RS2_ID"/>
-      <a name="width" val="5"/>
-    </comp>
     <comp lib="0" loc="(3210,2480)" name="Tunnel">
       <a name="label" val="F3_ID"/>
       <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(3210,2510)" name="Tunnel">
-      <a name="label" val="F7_ID"/>
-      <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(3230,2240)" name="Tunnel">
       <a name="label" val="RA_ID"/>
@@ -396,6 +377,14 @@
     </comp>
     <comp lib="0" loc="(3230,2310)" name="Tunnel">
       <a name="label" val="RD_ID"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(3230,2410)" name="Tunnel">
+      <a name="label" val="RS1_ID"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(3230,2440)" name="Tunnel">
+      <a name="label" val="RS2_ID"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(3270,1450)" name="Constant">
@@ -477,6 +466,12 @@
       <a name="incoming" val="4"/>
       <a name="spacing" val="3"/>
     </comp>
+    <comp lib="0" loc="(4000,1890)" name="Constant"/>
+    <comp lib="0" loc="(4000,2520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RD_EX"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(4010,2430)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="ALUSRC_ID"/>
@@ -485,9 +480,28 @@
       <a name="facing" val="east"/>
       <a name="label" val="BRANCH_ID"/>
     </comp>
+    <comp lib="0" loc="(4020,2090)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RD_ID"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(4020,2130)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="RS2_ID"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(4020,2550)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGWRITE_EX"/>
+    </comp>
+    <comp lib="0" loc="(4020,2610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RS2_ID"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(4030,2490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RD_MEM"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(4040,1650)" name="Tunnel">
@@ -514,19 +528,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="R"/>
     </comp>
-    <comp lib="0" loc="(4040,1890)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="W"/>
-    </comp>
     <comp lib="0" loc="(4040,2060)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="RB_ID"/>
       <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(4040,2090)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RD_ID"/>
-      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(4040,2160)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -536,32 +541,13 @@
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(4060,2460)" name="Tunnel">
+    <comp lib="0" loc="(4040,2460)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="REGWRITE_MEM"/>
     </comp>
-    <comp lib="0" loc="(4060,2490)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RD_MEM"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(4060,2520)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RD_EX"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(4060,2550)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="REGWRITE_EX"/>
-    </comp>
-    <comp lib="0" loc="(4060,2580)" name="Tunnel">
+    <comp lib="0" loc="(4040,2580)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="RS1_ID"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(4060,2610)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RS2_ID"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(4080,1650)" name="Tunnel">
@@ -576,12 +562,12 @@
     <comp lib="0" loc="(4080,1770)" name="Tunnel">
       <a name="label" val="REGWRITE_EX"/>
     </comp>
-    <comp lib="0" loc="(4080,2090)" name="Tunnel">
-      <a name="label" val="RD_EX"/>
-      <a name="width" val="5"/>
-    </comp>
     <comp lib="0" loc="(4080,2130)" name="Tunnel">
       <a name="label" val="RS2_EX"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(4090,2090)" name="Tunnel">
+      <a name="label" val="RD_EX"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(4210,2340)" name="Tunnel">
@@ -626,9 +612,15 @@
       <a name="facing" val="east"/>
       <a name="label" val="MWRITE_EX"/>
     </comp>
+    <comp lib="0" loc="(5020,2050)" name="Constant"/>
     <comp lib="0" loc="(5020,2480)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MEMTOREG_MEM"/>
+    </comp>
+    <comp lib="0" loc="(5030,2130)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RD_EX"/>
+      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(5030,2510)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -655,15 +647,6 @@
       <a name="facing" val="east"/>
       <a name="label" val="R"/>
     </comp>
-    <comp lib="0" loc="(5070,2050)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="W"/>
-    </comp>
-    <comp lib="0" loc="(5070,2130)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RD_EX"/>
-      <a name="width" val="5"/>
-    </comp>
     <comp lib="0" loc="(5070,2330)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="R"/>
@@ -678,7 +661,7 @@
     <comp lib="0" loc="(5110,1920)" name="Tunnel">
       <a name="label" val="REGWRITE_MEM"/>
     </comp>
-    <comp lib="0" loc="(5110,2130)" name="Tunnel">
+    <comp lib="0" loc="(5130,2130)" name="Tunnel">
       <a name="label" val="RD_MEM"/>
       <a name="width" val="5"/>
     </comp>
@@ -733,7 +716,7 @@
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 24 32
-a00093 102023
+1400093 102423 802103 1101b3
 </a>
       <a name="dataWidth" val="32"/>
       <a name="misaligned" val="true"/>
@@ -943,6 +926,7 @@ a00093 102023
     <wire from="(3050,2040)" to="(3080,2040)"/>
     <wire from="(3070,1060)" to="(3070,1560)"/>
     <wire from="(3090,1580)" to="(3110,1580)"/>
+    <wire from="(3090,2200)" to="(3170,2200)"/>
     <wire from="(3100,1820)" to="(3170,1820)"/>
     <wire from="(3100,1850)" to="(3140,1850)"/>
     <wire from="(3100,1880)" to="(3140,1880)"/>
@@ -971,6 +955,8 @@ a00093 102023
     <wire from="(3210,2280)" to="(3220,2280)"/>
     <wire from="(3210,2310)" to="(3230,2310)"/>
     <wire from="(3210,2350)" to="(3320,2350)"/>
+    <wire from="(3210,2410)" to="(3230,2410)"/>
+    <wire from="(3210,2440)" to="(3230,2440)"/>
     <wire from="(3220,2190)" to="(3220,2240)"/>
     <wire from="(3220,2190)" to="(3330,2190)"/>
     <wire from="(3220,2240)" to="(3230,2240)"/>
@@ -1059,16 +1045,25 @@ a00093 102023
     <wire from="(3840,1970)" to="(4040,1970)"/>
     <wire from="(4000,1270)" to="(4000,1440)"/>
     <wire from="(4000,1440)" to="(4270,1440)"/>
+    <wire from="(4000,1890)" to="(4040,1890)"/>
+    <wire from="(4000,2520)" to="(4060,2520)"/>
     <wire from="(4010,2430)" to="(4030,2430)"/>
     <wire from="(4020,1620)" to="(4040,1620)"/>
+    <wire from="(4020,2090)" to="(4040,2090)"/>
     <wire from="(4020,2130)" to="(4040,2130)"/>
+    <wire from="(4020,2550)" to="(4060,2550)"/>
+    <wire from="(4020,2610)" to="(4060,2610)"/>
     <wire from="(4030,2430)" to="(4030,2440)"/>
     <wire from="(4030,2440)" to="(4060,2440)"/>
+    <wire from="(4030,2490)" to="(4060,2490)"/>
+    <wire from="(4040,2460)" to="(4060,2460)"/>
+    <wire from="(4040,2580)" to="(4060,2580)"/>
     <wire from="(4080,1620)" to="(4100,1620)"/>
     <wire from="(4080,1920)" to="(4230,1920)"/>
     <wire from="(4080,1970)" to="(4270,1970)"/>
     <wire from="(4080,2010)" to="(4300,2010)"/>
     <wire from="(4080,2060)" to="(4200,2060)"/>
+    <wire from="(4080,2090)" to="(4090,2090)"/>
     <wire from="(4100,1540)" to="(4100,1620)"/>
     <wire from="(4100,1540)" to="(4160,1540)"/>
     <wire from="(4160,1500)" to="(4160,1540)"/>
@@ -1143,7 +1138,10 @@ a00093 102023
     <wire from="(4920,2170)" to="(5070,2170)"/>
     <wire from="(4930,2600)" to="(5030,2600)"/>
     <wire from="(4950,2540)" to="(5030,2540)"/>
+    <wire from="(5020,2050)" to="(5070,2050)"/>
     <wire from="(5020,2480)" to="(5030,2480)"/>
+    <wire from="(5030,2130)" to="(5070,2130)"/>
+    <wire from="(5110,2130)" to="(5130,2130)"/>
     <wire from="(5110,2170)" to="(5180,2170)"/>
     <wire from="(5110,2220)" to="(5190,2220)"/>
     <wire from="(5180,2150)" to="(5180,2170)"/>
@@ -6440,12 +6438,12 @@ a00093 102023
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect fill="#ebb0ff" height="191" rx="10" ry="10" stroke="#1879af" width="260" x="60" y="128"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="124" y="151">MEM-RegWrite</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="115" y="240">EX-RegWrite</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="123" y="210">EX-RegisterRD</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="120" y="271">ID-RegisterRS</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="132" y="181">MEM-RegisterRD</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="123" y="301">ID-RegisterRT</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="134" y="151">EX/MEM REGWRITE</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="115" y="240">ID/EX-RegWrite</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="123" y="210">ID/EX-RegisterRD</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="120" y="271">IF/ID-RegisterRS</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="135" y="181">EX/MEM-RegisterRD</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="123" y="301">IF/ID-RegisterRT</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="270" y="190">ForwadingA</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="270" y="239">ForwadingB</text>
       <text dominant-baseline="central" fill="#ebb0ff" font-family="Dialog" font-size="22" font-style="italic" font-weight="bold" text-anchor="middle" x="190" y="112">Forwarding Unit</text>
