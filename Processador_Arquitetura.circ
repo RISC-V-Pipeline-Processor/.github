@@ -104,6 +104,10 @@
       <a name="label" val="S_PC_IF"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(2050,1120)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="MemWrite"/>
+    </comp>
     <comp lib="0" loc="(2080,1540)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="7"/>
@@ -862,8 +866,7 @@
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 24 32
-293 6400313 393 129e13 1c3a023 128293 138393 628463
-fe0006e3 63
+402103 202023
 </a>
       <a name="dataWidth" val="32"/>
       <a name="misaligned" val="true"/>
@@ -974,6 +977,7 @@ fe0006e3 63
     <wire from="(2040,1450)" to="(2120,1450)"/>
     <wire from="(2040,1490)" to="(2120,1490)"/>
     <wire from="(2040,1980)" to="(2180,1980)"/>
+    <wire from="(2050,1120)" to="(2110,1120)"/>
     <wire from="(2080,1540)" to="(2240,1540)"/>
     <wire from="(2170,1470)" to="(2220,1470)"/>
     <wire from="(2180,1980)" to="(2180,2200)"/>
@@ -6463,7 +6467,9 @@ fe0006e3 63
       <text dominant-baseline="central" font-family="SansSerif" font-size="16" font-style="italic" font-weight="bold" text-anchor="middle" x="182" y="259">IFIDRegisterRt</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="16" font-style="italic" font-weight="bold" text-anchor="middle" x="367" y="220">S</text>
       <text dominant-baseline="central" fill="#b0b900" font-family="Dialog" font-size="20" font-style="italic" font-weight="bold" text-anchor="middle" x="241" y="137">HazardDetection</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="16" font-style="italic" font-weight="bold" text-anchor="middle" x="168" y="277">MEMWRITE</text>
       <circ-anchor facing="east" x="380" y="220"/>
+      <circ-port dir="in" pin="450,550" x="110" y="280"/>
       <circ-port dir="in" pin="480,420" x="110" y="170"/>
       <circ-port dir="in" pin="480,630" x="110" y="200"/>
       <circ-port dir="in" pin="480,780" x="110" y="230"/>
@@ -6476,6 +6482,10 @@ fe0006e3 63
       <a name="label" val="S"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(450,550)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="MEM_WRITE"/>
+    </comp>
     <comp lib="0" loc="(480,420)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="IDEXMemRead"/>
@@ -6487,7 +6497,7 @@ fe0006e3 63
     </comp>
     <comp lib="0" loc="(480,780)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="IDEXRegisterRt"/>
+      <a name="label" val="IDEXRegisterRD"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(480,940)" name="Pin">
@@ -6512,8 +6522,11 @@ fe0006e3 63
       <a name="incoming" val="5"/>
     </comp>
     <comp lib="1" loc="(1070,980)" name="OR Gate"/>
-    <comp lib="1" loc="(1290,840)" name="AND Gate"/>
+    <comp lib="1" loc="(1290,840)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
     <comp lib="1" loc="(1340,840)" name="NOT Gate"/>
+    <comp lib="1" loc="(540,550)" name="NOT Gate"/>
     <comp lib="1" loc="(780,1030)" name="XNOR Gate"/>
     <comp lib="1" loc="(780,1090)" name="XNOR Gate"/>
     <comp lib="1" loc="(780,1160)" name="XNOR Gate"/>
@@ -6532,6 +6545,8 @@ fe0006e3 63
       <a name="inputs" val="5"/>
       <a name="label" val="Igual"/>
     </comp>
+    <wire from="(1040,550)" to="(1040,840)"/>
+    <wire from="(1040,840)" to="(1240,840)"/>
     <wire from="(1070,980)" to="(1150,980)"/>
     <wire from="(1150,420)" to="(1150,820)"/>
     <wire from="(1150,820)" to="(1240,820)"/>
@@ -6539,12 +6554,14 @@ fe0006e3 63
     <wire from="(1150,860)" to="(1240,860)"/>
     <wire from="(1290,840)" to="(1310,840)"/>
     <wire from="(1340,840)" to="(1370,840)"/>
+    <wire from="(450,550)" to="(510,550)"/>
     <wire from="(480,1140)" to="(580,1140)"/>
     <wire from="(480,420)" to="(1150,420)"/>
     <wire from="(480,630)" to="(560,630)"/>
     <wire from="(480,780)" to="(540,780)"/>
     <wire from="(480,940)" to="(480,1140)"/>
     <wire from="(540,1060)" to="(580,1060)"/>
+    <wire from="(540,550)" to="(1040,550)"/>
     <wire from="(540,750)" to="(540,780)"/>
     <wire from="(540,750)" to="(580,750)"/>
     <wire from="(540,780)" to="(540,1060)"/>
