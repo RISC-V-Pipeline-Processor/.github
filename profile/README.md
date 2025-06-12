@@ -16,7 +16,7 @@
 ## Bibliography: Patterson, Hennessy. Computer Organization and Design RISC-V Edition: The Hardware Software Interface. 2020
 
 <div align="center">
-  <img src="Assets/circuito.png" alt="Processor" width="800px" />
+  <img src="circuito.png" alt="Processor" width="800px" />
 </div>
 
 # Português:
